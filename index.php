@@ -9,9 +9,9 @@ include("config.php");
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Login Area | Job Portal</title>
-  <link href="https://rootplacement.com/images/rm-job-logo.png" rel="icon">
-  <link href="assets/images/rm-job-logo.png" rel="apple-touch-icon">
-  <link href="assets/images/rm-job-logo.png" rel="icon" type="image/png" sizes="16x16">
+  <link href="" rel="icon">
+  <link href="" rel="apple-touch-icon">
+  <link href="" rel="icon" type="image/png" sizes="16x16">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">

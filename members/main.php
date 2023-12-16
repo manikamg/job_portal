@@ -3,7 +3,6 @@
         border-color: #5D46BD;
     }
 
-
     .job-list-card {
         width: 100%;
         padding: 20px 15px;
@@ -94,7 +93,7 @@
 
 <div class="col-md-9">
     <div class="box border_color">
-        <div align="center">Current Openings</div>
+        <!-- <div align="center">Current Openings</div> -->
         <div class="box-body border_color">
             <table id="job_list_data" class="table table-bordered table-striped">
                 <thead>
@@ -108,7 +107,7 @@
                     </tr> -->
 
                     <tr>
-                        <th>Job Posted</th>
+                        <th>Current Openings</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -165,7 +164,7 @@
                                         </div>
                                         <div class="col-lg-2 col-md-12">
                                             <div class="apply_container" style="width: 100%;">
-                                                <?php if ($run['regi_status'] == 1) { ?>
+                                                <?php if ($run['regi_status'] == "yes") { ?>
                                                     <button type="button"
                                                         onclick="window.open('apply-for-job?id=<?php echo base64_encode($row['id']); ?>','_self')"
                                                         class="btn btn-primary btn-block border_ btn_1 btn-sm">

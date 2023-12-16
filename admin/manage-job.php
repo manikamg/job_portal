@@ -35,7 +35,7 @@ if (isset($_POST['approval_post'])) {
 }
 ?>
 <div class="content-wrapper">
-<div class="container">
+<div class="container" style="padding-right: 50px;">
   <section class="content-header">
     <h1>
       <small><a href="dashboard?id=<?php echo trim($_GET['id']); ?>">
