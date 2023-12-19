@@ -20,8 +20,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="https://www.rmjob.in//images/rmjoblogo.png" type="image/png" sizes="16x16">
-    <title> Rm Job Management | Admin Area </title>
+    <link rel="icon" href="images/rmjoblogo.png" type="image/png" sizes="16x16">
+    <title>  </title>
    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
    <link rel="stylesheet" href='../bower_components/bootstrap/dist/css/bootstrap.min.css'>
   <link rel="stylesheet" href='../bower_components/font-awesome/css/font-awesome.min.css'>

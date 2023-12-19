@@ -14,8 +14,6 @@
     </ol>
   </section>
 
-
-
   <section class="content">
 
     <div class="row">
@@ -75,7 +73,7 @@
 
 
       <div class="col-lg-6">
-        <!-- BAR CHART -->
+        <!-- DONUT CHART -->
         <div class="box box-success">
           <div class="box-header with-border">
             <h3 class="box-title">Candidate Registration On This Week</h3>
@@ -100,18 +98,14 @@
 
     <div class="row">
       <hr />
-
-
-
-
-
       <?php $admsql = query("SELECT `id`, `admid`, `name`, `company`, `contact`, `address`, `about`, `email`, `loginid`, `password`, `pic`, `is_super`, `created_at`, `updated_at` FROM `admins` WHERE `admid`='$id'");
       while ($admrun = mysqli_fetch_array($admsql)) { ?>
         <div class="col-lg-3 col-xs-12">
-          <div class="small-box card-purple-blue border-radius-7">
+          <div class="small-box card-purple-blue border-radius-7"  style="height:150px;">
             <div class="inner">
-              <h3><img src="https://consultancy.rmjob.in/assets/clients/<?php echo $admrun['pic']; ?>"
-                  style=width:70px;border-radius:5px; /></h3>
+              <h3>
+                <img src="../assets/clients/<?php echo $admrun['pic']; ?>" style=width:70px;border-radius:5px; />
+              </h3>
               <p>
                 <?php echo $admrun['company']; ?>
               </p>
@@ -230,7 +224,7 @@
               <?php } else { ?>
                 <img src="../assets/<?php echo $row['pic']; ?>" alt="Job Portal" width="60px;" height="60px;">
               <?php } ?>
-              
+
 
             </td>
             <td><b>

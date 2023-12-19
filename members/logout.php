@@ -4,6 +4,6 @@
    unset($_SESSION['name']); 
    unset($_SESSION['email']);
    if(session_destroy()) {
-      header("Location:../client");
+      header("Location:../");
    }
 ?>

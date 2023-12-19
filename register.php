@@ -99,7 +99,7 @@ $uri_array = explode("/", $uri); ?>
                     <?php $indust = printwhileloop("SELECT `id`,`postname` FROM `postnames` ORDER BY `id` DESC");
                     foreach ($indust as $key => $indtyp) { ?>
                       <option value="
-                        <?php echo $indtyp[0] ?>">
+                        <?php echo $indtyp[0]; ?>">
                         <?php echo ($indtyp[1]); ?>
                       </option>
                     <?php } ?>

@@ -144,7 +144,7 @@ if (isset($_POST["update"])) {
                 <div class="box-body"><b style="color:red">Success..!<br /> Your Password Updated</b></div>
             </div><br>
         <?php } ?>
-        <a href=".\" style="
+        <a href="../.\" style="
             position:relative;
             z-index:1;
             cursor:pointer;

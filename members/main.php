@@ -1,13 +1,15 @@
 <style>
-    .border_color {
-        border-color: #5D46BD;
-    }
-
     .job-list-card {
         width: 100%;
-        padding: 20px 15px;
+        padding: 20px 10px;
         border-radius: 7px;
         box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .job-list-card .job-list-card-row .job-list-card-row-coll .row {
+        display: flex;
+        align-items: center;
+        /* justify-content: start; */
     }
 
     .img_container {
@@ -27,75 +29,21 @@
         height: 70%;
     }
 
-    .job_types span,
-    .job_dates span {
-        font-weight: bold;
-        color: gray;
-    }
+    .detail_container {}
 
-    table {
-        width: 100%;
-    }
-
-    .apply_container {
+    .detail_container .detail_container_row {
         display: flex;
         align-items: center;
-        justify-content: center;
-    }
-
-    .border_ {
-        border: none;
-        border-radius: 5px;
-        /* height: 40px; */
-        line-height: 28px;
-        font-size: 16px;
-        /* font-weight: 600; */
-    }
-
-    .btn_1:hover {
-        background-color: #5D46BD;
-    }
-
-    .apply_container {
-        height: 100px;
-    }
-
-    @media (max-width: 768px) {
-        table {
-            width: 90%;
-        }
-
-        .job-list-card {
-            width: 100%;
-        }
-
-        .img_container_col {
-            /* display: flex;
-            justify-content: center; */
-        }
-
-        .img_container {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-        }
-
-        .detail_container {
-            margin-top: 105px;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-
+        justify-content: flex-start;
+        height: 100%;
     }
 </style>
 
-
 <div class="col-md-9">
-    <div class="box border_color">
-        <!-- <div align="center">Current Openings</div> -->
-        <div class="box-body border_color">
-            <table id="job_list_data" class="table table-bordered table-striped">
+    <div class="box">
+        <div align="center">Current Openings</div>
+        <div class="box-body table-responsive">
+            <table id="example" class="table table-bordered table-striped">
                 <thead>
                     <!-- <tr>
                         <th>Apply</th>
@@ -107,7 +55,7 @@
                     </tr> -->
 
                     <tr>
-                        <th>Current Openings</th>
+                        <th>Job Posted</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -120,60 +68,51 @@
                                     <div class="row job-list-card-row">
                                         <div class="col-lg-10 job-list-card-row-coll">
                                             <div class="row">
-                                                <div class="col-lg-2 col-md-12 img_container_col">
+                                                <div class="col-lg-2">
                                                     <div class="img_container">
                                                         <img src="../assets/images/job-search.png" alt="job search icon">
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-10 col-md-12">
+                                                <div class="col-lg-10">
                                                     <div class="detail_container">
-                                                        <div class="row">
-                                                            <div class="col-lg-12 job_types">
-                                                                <!-- <table class="table">
-                                                                    <tr> -->
-                                                                <div><span>Type: </span>
-                                                                    <?php echo ucwords($row['joiningprocess']); ?>
-                                                                </div>
-                                                                <div><span>Location: </span>
-                                                                    <?php echo ucwords($row['location']); ?>
-                                                                </div>
-                                                                <div><span>Post: </span>
-                                                                    <?php echo ucwords($row['postname']); ?>
-                                                                </div>
-                                                                <!-- </tr>
-                                                                </table> -->
+                                                        <div class="row detail_container_row">
+                                                            <div class="col-lg-12 job_type">
+                                                                <table class="table">
+                                                                    <tr>
+                                                                        <td><span>Type: </span>
+                                                                            <?php echo ucwords($row['joiningprocess']); ?>
+                                                                        </td>
+                                                                        <td><span>Location: </span>
+                                                                            <?php echo ucwords($row['location']); ?>
+                                                                        </td>
+                                                                        <td><span>Post: </span>
+                                                                            <?php echo ucwords($row['postname']); ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-lg-12 job_dates">
-                                                                <!-- <table class="table">
-                                                                    <tr> -->
-                                                                <div><span>Post Date: </span>
-                                                                    <?php echo date('d-m-Y', strtotime($row['sdate'])) . ' (<small>' . date('M', strtotime($row['sdate'])) . '</small>)'; ?>
-                                                                </div>
-                                                                <div><span>Last Date: </span>
-                                                                    <?php echo date('d-m-Y', strtotime($row['edate'])) . ' (<small>' . date('M', strtotime($row['edate'])) . '</small>)'; ?>
-                                                                </div>
-                                                                <!-- </tr>
-                                                                </table> -->
+                                                            <div class="col-lg-12 job_type">
+                                                                <table class="table">
+                                                                    <tr>
+                                                                        <td><span>Post Date: </span>
+                                                                            <?php echo date('d/m -Y', strtotime($row['edate'])) . ' (<small>' . date('M', strtotime($row['edate'])) . '</small>)'; ?>
+                                                                        </td>
+                                                                        <td><span>Last Date: </span>
+                                                                            <?php echo date('d/m/Y', strtotime($row['sdate'])) . ' (<small>' . date('M', strtotime($row['sdate'])) . '</small>)'; ?>
+                                                                        </td>
+                                                                        <td>.</td>
+                                                                    </tr>
+                                                                </table>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-md-12">
-                                            <div class="apply_container" style="width: 100%;">
-                                                <?php if ($run['regi_status'] == "yes") { ?>
-                                                    <button type="button"
-                                                        onclick="window.open('apply-for-job?id=<?php echo base64_encode($row['id']); ?>','_self')"
-                                                        class="btn btn-primary btn-block border_ btn_1 btn-sm">
-                                                        Apply <i class="fa fa-chevron-right"></i></button>
-                                                <?php } else { ?>
-                                                    <button type="button" class="btn btn-primary btn-block border_ btn_1 btn-sm"
-                                                        disabled="disabled">Apply <i class="fa fa-chevron-right"></i></button>
-                                                <?php } ?>
-                                            </div>
+                                        <div class="col-lg-2">
+                                            <div class="apply_container"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -224,8 +163,3 @@
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-        $('#job_list_data').DataTable();
-    }); 
-</script>

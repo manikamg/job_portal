@@ -10,8 +10,8 @@ include("config.php");
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Login Area | Job Portal</title>
   <link href="" rel="icon">
-  <link href="" rel="apple-touch-icon">
-  <link href="" rel="icon" type="image/png" sizes="16x16">
+  <link href="assets/images/rm-job-logo.png" rel="apple-touch-icon">
+  <link href="assets/images/rm-job-logo.png" rel="icon" type="image/png" sizes="16x16">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
@@ -49,7 +49,7 @@ include("config.php");
 
     .container {
       margin: 0;
-      top: 50px;
+      top: 40px;
       left: 50%;
       position: absolute;
       text-align: center;
@@ -272,7 +272,7 @@ include("config.php");
       <div class="login-logo"><i class="fa fa-lock"></i></div>
 
       <div class="">
-        <h5 class="border_radius" style="font-size:14px; padding-bottom:30px; border-radius: 7px; color:#fff;">Sign in to start your
+        <h5 class="border_radius" style="font-size:14px; margin-top:-20px; padding-bottom:10px; border-radius: 7px; color:#fff;">Sign in to start your
           session</h5>
 
         <div class="col-xs-12">
@@ -285,7 +285,9 @@ include("config.php");
           <a href="register" type="submit" name="submit" class="btn border_ btn-warning btn-block">Candidate
             Regiser</a>
           <hr />
-          <a href="staff/" type="submit" name="submit" class="btn border_ btn-info btn-block">Franchise Login</a>
+          <a href="franchise.php" type="submit" name="submit" class="btn border_ btn-info btn-block">Franchise Login</a>
+          <hr />
+          <a href="recruiter.php" type="submit" name="submit" class="btn border_ btn-success btn-block">Recruiter Login</a>
         </div>
       </div>
      

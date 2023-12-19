@@ -324,6 +324,7 @@ $highestq   = mysqli_real_escape_string($db,$_POST['hq']);
 $location   = mysqli_real_escape_string($db,$_POST['currentcity']);
 $pid        = mysqli_real_escape_string($db,$_POST['postid']);
 $ind        = mysqli_real_escape_string($db,$_POST['tag']);
+//$ind        = 1;
 $preference = mysqli_real_escape_string($db,$_POST['preference']);
 $gender     = mysqli_real_escape_string($db,$_POST['gender']);
 $exp        = mysqli_real_escape_string($db,$_POST['exp']);
